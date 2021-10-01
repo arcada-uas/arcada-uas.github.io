@@ -1,3 +1,56 @@
 body {
-    text-align: center;
+    text-align: left;
+    font-family: Geneva, sans-serif;
+}
+
+img {
+    border: 1px solid black;
+}
+h1 {
+    padding: 10px;
+    background-color: #e7d15b;
+    margin-top: 70px;
+}
+h2 {
+    padding: 10px;
+    background-color: #e5dba0;
+}
+p.instruction {
+    padding: 5px;
+    background-color: #8fcce1;
+}
+
+code {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: black;
+
+}
+
+code.inline {
+    padding: unset;
+    display: inline;
+    color: unset;
+    background-color: unset;
+}
+
+.divTable {
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+.divTableBody {
+    display: inline-block;
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableRowHead {
+    display: table-header-group;
+}
+.divTableCell {
+    display: table-cell;
+    padding: 10px;
 }
