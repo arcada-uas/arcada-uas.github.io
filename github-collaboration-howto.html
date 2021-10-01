@@ -7,79 +7,123 @@
 </head>
 <body>
 
-<h1>New repository</h1>
+<h1>Start with a new repository on github</h1>
 
-    <p class="instruction">Make a new <b>private</b> repository on your github.</p>
+    <p class="instruction">
+        Make a new <b>private</b> repository on
+        your <a href="https://guides.github.com/activities/hello-world/">github</a>.
+        Chose a short but descriptive name for it.</p>
     <img src="pics/001.png" width="200px">
     <br/>
     <br/>
     <img src="pics/002.png" width="500">
-    <p class="instruction">In the <code class="inline">Settings > Manage Access</code> invite collaborators (ask them for their github id)
+    <p class="instruction">
+        In the <code class="inline">Settings > Manage Access</code> invite collaborators
+        (ask them for their github id)
         and teachers [EspinosaLeal, parland] </p>
     <img src="pics/003.png" width="700">
 
 <h1>Prepare your Personal Access Token</h1>
 
-    <p class="instruction">Read the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">documentation</a>
+    <p class="instruction">
+        Read the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">
+        documentation</a>
     <br/>Visit <a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a>
         and create the PAT you will use during one year.<p>
     <img src="pics/004.png" width="700">
 
-<h1>Get Terminal</h1>
+<h1>On notebooks.csc.fi</h1>
 
-    <h2>On notebooks.csc.fi</h2>
+    <h2>Get Terminal</h2>
         <p class="instruction">Open new Terminal</p>
         <br/>
         <img src="pics/005.png" width="200px">
         <br/>
 
-    <h2>On https://colab.research.google.com</h2>
-        <p class="instruction">Upload and run the <a href="files/init.ipynb"> inti.ipynb </a> notebook which will give you access.
-            </p>
-        <img src="pics/007.png" width="500px"/>
 
+    <h2>In Terminal</h2>
 
-<h1>In Terminal</h1>
+            <p class="instruction">
+                Check were you are. Run:</p>
+            <code>pwd</code>
+            <p class="instruction">
+                Check if you got git. Run:</p>
+            <code>git --version</code>
+            <br/>
+            <img src="pics/009.png" width="250px">
 
-    <h2>Check that Terminal is live</h2>
-        <p class="instruction">Check were you are. Run:</p>
-        <code>pwd</code>
-        <p class="instruction">Check if you got git. Run:</p>
-        <code>git --version</code>
-        <div class="divTable">
-            <div class="divTableBody">
-                <div class="divTableRowHead">
-                    <div class="divTableCell">Colab</div>
-                    <div class="divTableCell">CSC</div>
-                </div>
-                <div class="divTableRow">
-                    <div class="divTableCell"><img src="pics/008.png" width="250px"></div>
-                    <div class="divTableCell"><img src="pics/009.png" width="250px"></div>
-                </div>
-            </div>
-        </div>
-
-    <h2>Set-up first</h2>
-        <p class="instruction">Run</p>
+    <h2>Set-up git first</h2>
+        <p class="instruction">
+            Run</p>
         <code>git config --global credential.helper store</code>
-        <p class="instruction"><em>Note:</em> This is meant for temporary cloud instances!
-            While this is convenient, Git will store your credentials in clear text
+        <p class="instruction">
+            <em>Note:</em> This is meant for temporary cloud instances!
+            While this is convenient,
+            <br/>
+            Git will store your credentials in clear text
             in a local file (.git-credentials) in your %HOME% directory.
+            <br/>
             To store in your project directory remove the <code class="inline">--global</code> flag.
+            <br/>
             If you don't like this, delete this file and switch
             to using <a href="https://git-scm.com/docs/git-credential-cache">the cache option</a> for one day.</p>
         <code>git config --global credential.helper cache --timeout=86400</code>
-        <p class="instruction">Store your id and address</p>
+        <p class="instruction">
+            Store your id and address</p>
         <code>git config --global user.name your_github_username</code>
         <code>git config --global user.email "your_email"</code>
         <code>git config --list</code>
-    <h2>Clone repo from your github (or from your collaborator's) now</h2>
-        <code>git clone https://<i>your_git_username</i>:<i>your_PAT</i>@github.com/<i>repo_owner_username</i>/<i>repo_id</i>.git</code>
-        <p class="instruction">NOTE: you should use real credentials instead of models.</p>
 
-    <h1>Start to work. Happy coding!</h1>
-    <p class="instruction">Read the <a href="https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html">
+    <h2>Clone repo from your github (or from your collaborator's)</h2>
+        <code>git clone https://<i>your_git_username</i>:<i>your_PAT</i>@github.com/<i>repo_owner_username</i>/<i>repo_id</i>.git</code>
+        <p class="instruction">
+            NOTE: you should use real credentials instead of models.<br/>
+            After this you should have a cloned project folder in you system.  </p>
+        <img src="pics/010.png" width="400px">
+
+        <p class="instruction">
+            In there you can create new .ipynb files.
+            Just don't forget to add them to your git tracking system. Run:</p>
+        <code>git add -A *.ipynb</code>
+
+    <h2>Start to work. Happy coding!</h2>
+    <p class="instruction">
+        Read the <a href="https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html">
         Start using Git on the command line</a> guide how to use git for collaboration.</p>
+    <p class="instruction">
+        When you are working in a notebook
+        you can communicate with git without leaving your notebook.
+        <br/>
+        It is a god practice cleaning the output before commit. That will reduce filesize
+        and make <a href="https://docs.github.com/en/github/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits">
+            diffs</a> available on github. </p>
+    <img src="pics/011.png" width="600px">
+    <p class="instruction"><em>DON'T FORGET TO SAVE YOUR CODE ON NOTEBOOKS.CSC.FI BEFORE COMMIT.</em></p>
+    <img src="pics/013.png" width="200px">
+
+<h1>On https://colab.research.google.com</h1>
+    <p class="instruction">
+        You don't have access to terminal, But you can get a notebook from github.</p>
+    <img src="pics/017.png" width="200px">
+    <br/><br/>
+    <div class="instruction">
+        <ol>
+            <li>Chose GitHub.</li>
+            <li>Include private repos: you'll need to give access to your github account.</li>
+            <li>Write repo's owner's github username.</li>
+            <li>Choose the repo from dropdown list.</li>
+            <li>Click on notebook you want edit.</li>
+        </ol>
+    </div>
+    <br/><br/>
+    <img src="pics/016.png" width="600px">
+    <br/><br/>
+    <p class="instruction">
+        When you are ready with code editing,
+        save a copy of the notebook in GitHub with a reasonable message.</p>
+    <img src="pics/020.png" width="250px">
+<br/><br/>
+    <img src="pics/019.png" width="500px">
 
 
 
