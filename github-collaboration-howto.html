@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>GitHub Collaboration</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 
@@ -128,6 +132,11 @@
     For this course it’s good enough to have one composite notebook per assignment
     (all tasks in one bag) <br/>
     and acquire data sets dynamically from the URL at data sources.<br/>
+    <pre><code class="python">import zipfile, requests, io
+url = 'https://host.tld/data.zip'
+file_name = 'data.csv'
+data = pd.read_csv(zipfile.ZipFile(io.BytesIO(requests.get(url, stream=True).content)).open(file_name))
+data.head(3)</code></pre><br/>
     The repo consists of just one file then.<br/>
     Let’s “Keep It Super Simple” :)<br/>
 
